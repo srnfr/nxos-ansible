@@ -11,4 +11,12 @@
     ansible_become_method: enable
     ansible_connection: ansible.netcommon.network_cli
     ansible_command_timeout: 60
+    
+  tasks:
+    - name: add vlan 
+      cisco.nxos.nxos_vlans:
+        config:
+        - vlan_id: 524
+          name: test-vlan524
+
 
