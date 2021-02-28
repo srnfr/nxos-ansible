@@ -1,0 +1,14 @@
+- name: Add NXOS VLANs
+  hosts: sbxnxos
+  gather_facts: no
+  vars:
+
+    ansible_network_os: cisco.nxos.nxos
+    ansible_ssh_port: 8181
+    ansible_user: admin
+    ansible_password: ${{ secrets.NXOSPWD }}
+    ansible_become: yes
+    ansible_become_method: enable
+    ansible_connection: ansible.netcommon.network_cli
+    ansible_command_timeout: 60
+
