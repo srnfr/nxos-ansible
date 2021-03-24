@@ -16,7 +16,7 @@
     - name: add vlan 
       cisco.nxos.nxos_vlans:
         config:
-        - vlan_id: 524
-          name: test-vlan524
+        - vlan_id: 525
+          name: test-vlan525
 
 
